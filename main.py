@@ -13,4 +13,4 @@ def handleMessage(msg):
     print("Mensaje: ",msg)
     send(msg, broadcast = True)
 
-socketio.run(app, debug = True, port=5004)  
+socketio.run(app)  
