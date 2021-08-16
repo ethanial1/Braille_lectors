@@ -1,11 +1,8 @@
-import os
 from flask import Flask, render_template
 from flask_socketio import SocketIO, send
 
 app = Flask(__name__)
 socketio = SocketIO(app)
-
-port = os.environ['PORT']
 
 @app.route('/')
 def index():
@@ -16,4 +13,4 @@ def handleMessage(msg):
     print("Mensaje: ",msg)
     send(msg, broadcast = True)
 
-socketio.run(app, host='0.0.0.0', port=port)  
+socketio.run(app, host='0.0.0.0', port=443 )  
