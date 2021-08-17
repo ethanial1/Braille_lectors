@@ -3,3 +3,4 @@ gunicorn
 Flask-SocketIO
 eventlet
 gevent-websocket
+eventlet>=0.31.0
