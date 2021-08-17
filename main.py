@@ -13,4 +13,5 @@ def handleMessage(msg):
     print("Mensaje: ",msg)
     send(msg, broadcast = True)
 
-socketio.run(app)  
+if __name__ == '__main__':
+    socketio.run(app)  
