@@ -13,4 +13,4 @@ def handleMessage(msg):
     print("Mensaje: ",msg)
     send(msg, broadcast = True)
 
-socketio.run(app, ip='0.0.0.0', port=443 )  
+socketio.run(app)  
