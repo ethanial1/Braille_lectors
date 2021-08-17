@@ -10,7 +10,7 @@ def index():
 
 @socketio.on('message')
 def handleMessage(msg):
-    print("Mensaje: ",msg)
+    print("Mensaje:: ",msg)
     send(msg, broadcast = True)
 
 if __name__ == '__main__':
