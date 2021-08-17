@@ -14,4 +14,4 @@ def handleMessage(msg):
     send(msg, broadcast = True)
 
 if __name__ == '__main__':
-    socketio.run(app, cors_allowed_origins = '*')  
+    socketio.run(app, cors_allowed_origins = '*',logger=True, engineio_logger=True)  
