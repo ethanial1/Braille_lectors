@@ -4,4 +4,4 @@ Flask-SocketIO
 gevent-websocket
 eventlet==0.30.2
 opencv-python
-numpy==1.8.0
+numpy
