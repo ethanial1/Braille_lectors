@@ -28,6 +28,7 @@
             var reader = new FileReader();
             reader.onload = function(evt){
                 socket.send(evt.target.result);
+                console.log('enviado');
             };
             reader.readAsDataURL(file);
             });

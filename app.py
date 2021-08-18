@@ -18,12 +18,14 @@ def handleMessage(msg):
     img =  Imagen(msg)
     procs = Procesamiento(image = img)
 
+    print('Recibido')
     # iteramos sobre el
     for letra in procs:
         clasificador.push(letra)
     
     result = clasificador.obtener_resultado()     
     send(result)
+    print('enviado')
 
 if __name__ == '__main__':
     socketio.run(app, logger=True, engineio_logger=True)  
