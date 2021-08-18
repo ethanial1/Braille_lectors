@@ -1,4 +1,4 @@
-import cv2
+import cv2 as cv
 from math import sqrt
 from collections import Counter
 from .braille import Braille
@@ -307,7 +307,7 @@ class Procesamiento(object):
     imagen_bordes = self.image.obtener_imagen_bordes()
 
     # Buscar los contornos
-    contornos = cv2.findContours(imagen_bordes, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+    contornos = cv.findContours(imagen_bordes, cv.RETR_TREE, cv.CHAIN_APPROX_SIMPLE)
 
     if len(contornos) == 2:
       contornos = contornos[0]
