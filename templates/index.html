@@ -22,13 +22,18 @@
             $('#messages').append('<li>'+msg+'</li>');
         });
 
-        $('#send').on('click', function (e){
-            var file = e.originalEvent.target.file[0];
+        $(function(){
+            $("#myMessage").on('change', function(){
+                var file = e.originalEvent.target.file[0];
             var reader = new FileReader();
             reader.onload = function(evt){
                 socket.send(evt.target.result);
             };
             reader.readAsDataURL(file);
+            });
+        });
+        $('#send').on('click', function (e){
+            
         });
         
     </script>
