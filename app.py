@@ -18,6 +18,7 @@ def handleMessage(msg):
     img =  Imagen(msg)
     procs = Procesamiento(image = img)
 
+    # iteramos sobre el
     for letra in procs:
         clasificador.push(letra)
     
