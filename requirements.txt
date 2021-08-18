@@ -5,3 +5,6 @@ gevent-websocket
 eventlet==0.30.2
 opencv-python
 numpy
+libsm6 
+libxrender1 
+libfontconfig1
