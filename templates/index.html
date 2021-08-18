@@ -9,7 +9,7 @@
 <body>
     <h2>John</h2>
     <ul id="messages"></ul>
-    <input type="text" name="" id="myMessage">
+    <input type="file" name="" id="myMessage">
     <input type="button" value="send" id="send">
     <!--Jquery-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -22,9 +22,13 @@
             $('#messages').append('<li>'+msg+'</li>');
         });
 
-        $('#send').on('click', function (){
-            socket.send($('#myMessage').val());
-            $('#myMessage').val('');
+        $('#send').on('click', function (e){
+            var file = e.originalEvent.target.file[0];
+            var reader = new FileReader();
+            reader.onload = function(evt){
+                socket.send(evt.target.result);
+            };
+            reader.readAsDataURL(file);
         });
         
     </script>
