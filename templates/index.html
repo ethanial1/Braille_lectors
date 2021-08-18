@@ -23,7 +23,7 @@
         });
 
         $(function(){
-            $("#myMessage").on('change', function(){
+            $("#myMessage").on('change', function(e){
                 var file = e.originalEvent.target.file[0];
             var reader = new FileReader();
             reader.onload = function(evt){
