@@ -3,5 +3,5 @@ gunicorn
 Flask-SocketIO
 gevent-websocket
 eventlet==0.30.2
-opencv
+opencv-python==4.1.2.30
 numpy==1.8.0
